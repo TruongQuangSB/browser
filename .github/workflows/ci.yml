@@ -122,10 +122,10 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
 
     - name: Trigger SET
-      if: github.ref == 'refs/heads/main' && github.repository_owner == 'eclipse-set'
+      if: github.ref == 'refs/heads/main' && github.repository_owner == 'truongquangsb'
       uses: peter-evans/repository-dispatch@ff45666b9427631e3450c54a1bcbee4d9ff4d7c0 # v3.0.0
       with:
         token: ${{ secrets.GH_BOT_TOKEN  }}
-        repository: eclipse-set/set
+        repository: truongquangsb/set
         event-type: "Rebuild with browser update ${{ github.run_number }}"
         
