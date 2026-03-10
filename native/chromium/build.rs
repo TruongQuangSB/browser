@@ -83,7 +83,6 @@ fn gen_cef(cef_path: std::path::Display) {
         .blocklist_type("char16")
         .blocklist_type("u?int64")
         .blocklist_type("DWORD")
-        .blocklist_type("HWND.*")
         .blocklist_type("HINSTANCE.*")
         .blocklist_type("HMENU.*")
         .blocklist_type("HICON.*")
