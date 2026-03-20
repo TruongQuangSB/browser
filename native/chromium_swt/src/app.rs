@@ -56,7 +56,7 @@ pub fn create_browser(
         text_area_resize: cef::cef_state_t::STATE_DEFAULT,
         tab_to_links: cef::cef_state_t::STATE_DEFAULT,
         local_storage: cef::cef_state_t::STATE_DEFAULT,
-        databases: cef::cef_state_t::STATE_DEFAULT,
+        databases_deprecated: cef::cef_state_t::STATE_DEFAULT,
         webgl: cef::cef_state_t::STATE_DEFAULT,
         background_color: bg,
         chrome_status_bubble: cef::cef_state_t::STATE_DISABLED,
@@ -93,6 +93,8 @@ fn cef_window_info(hwnd: *mut c_void, w: c_int, h: c_int) -> cef::_cef_window_in
         },
         parent_window: hwnd as cef::win::HWND,
         windowless_rendering_enabled: 0,
+        runtime_style: cef::win::cef_runtime_style_t::CEF_RUNTIME_STYLE_DEFAULT,
+        size: std::mem::size_of::<cef::_cef_window_info_t>(),
         window: 0 as cef::win::HWND,
         ex_style: 0,
         window_name: cef::cef_string_t {
