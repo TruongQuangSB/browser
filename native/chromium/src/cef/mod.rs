@@ -24,6 +24,7 @@ pub type char16 = u16;
 pub type time_t = i64;
 pub type int64 = ::std::os::raw::c_longlong;
 pub type uint64 = ::std::os::raw::c_ulonglong;
+pub const CEF_API_VERSION: std::os::raw::c_int = 14500;
 
 pub type HANDLE = *mut ::std::os::raw::c_void;
 #[repr(C)]

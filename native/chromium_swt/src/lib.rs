@@ -94,6 +94,7 @@ pub fn cefswt_init(
         log_items: chromium::cef::cef_log_items_t::LOG_ITEMS_DEFAULT,
         chrome_policy_id: chromium::utils::cef_string_empty(),
         chrome_app_icon_id: 0,
+        disable_signal_handlers: 0,
     };
 
     do_initialize(main_args, settings, japp);
@@ -117,6 +118,7 @@ fn do_initialize(
     settings: cef::_cef_settings_t,
     app_raw: *mut cef::_cef_app_t,
 ) {
+    unsafe { cef::cef_api_hash(cef::CEF_API_VERSION, 0) };
     unsafe { cef::cef_initialize(&main_args, &settings, &mut (*app_raw), std::ptr::null_mut()) };
 }
 

@@ -102,6 +102,9 @@ fn gen_cef(cef_path: std::path::Display) {
         .raw_line("pub type time_t = i64;")
         .raw_line("pub type int64 = ::std::os::raw::c_longlong;")
         .raw_line("pub type uint64 = ::std::os::raw::c_ulonglong;")
+        // The API Version should be change by update CEF version.
+        // See: https://github.com/chromiumembedded/cef/blob/master/cef_api_versions.json
+        .raw_line("pub const CEF_API_VERSION: std::os::raw::c_int = 14500;")
         .generate()
         .expect("Failed to gencef")
         .to_string();

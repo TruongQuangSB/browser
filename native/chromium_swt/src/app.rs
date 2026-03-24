@@ -110,6 +110,8 @@ fn cef_window_info(hwnd: *mut c_void, w: c_int, h: c_int) -> cef::_cef_window_in
         menu: 0 as cef::win::HMENU,
         shared_texture_enabled: 0,
         external_begin_frame_enabled: 0,
+        size: std::mem::size_of::<cef::_cef_window_info_t>(),
+        runtime_style: cef::win::cef_runtime_style_t::CEF_RUNTIME_STYLE_ALLOY
     }
 }
 
