@@ -116,6 +116,10 @@ jobs:
       with:
         name: chromium-swt-libs
         path: java/org.eclipse.set.browser.lib/res/
+    
+    - name: Copy CEF
+      run: |
+        cp -a java/org.eclipse.set.browser.cef.win32/res/cef/. java/org.eclipse.set.browser.lib/res/
 
     - name: Build
       working-directory: java
