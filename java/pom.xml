@@ -136,7 +136,7 @@
 		<repository>
 			<id>set-github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/eclipse-set/browser</url>
+			<url>https://maven.pkg.github.com/truongquangsb/browser</url>
 		</repository>
 	</distributionManagement>
 
